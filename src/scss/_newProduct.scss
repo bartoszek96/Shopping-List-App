@@ -1,0 +1,71 @@
+.newProduct {
+  @include flex-center(center);
+  @include animated-background;
+  color: $font-color;
+  text-align: center;
+  padding: 30px;
+  width: 100vw;
+
+  &__form {
+    @include flex-center(center, column);
+    border-radius: 20px;
+    width: 80vw;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-family: $main-font;
+    font-weight: 500;
+    background-color: $form-bgc;
+
+    @media (max-width: $small) {
+      width: 98vw;
+    }
+  }
+
+  &__wrapper {
+    @include flex-center(space-between);
+    margin: 5px;
+    width: 70vw;
+
+    @media (max-width: $small) {
+      flex-direction: column;
+    }
+  }
+
+  &__inputText {
+    width: 40vw;
+  }
+
+  &__inputNumber {
+    width: 200px;
+  }
+
+  &__inputSelect {
+    width: 200px;
+  }
+
+  &__inputCheckbox {
+    height: 20px;
+    width: 20px;
+  }
+
+  &__input {
+    @include input-style;
+    @media (max-width: $small) {
+      width: 75vw;
+      margin: 10px;
+    }
+  }
+
+  &__submitButton {
+    @include backgroundColorAndHover($submit-bgc);
+    @include input-style;
+    color: $font-color;
+    min-width: 100px;
+    width: 30vw;
+  }
+
+  &__validationInfo {
+    @include text-style;
+    margin: 10px;
+  }
+}

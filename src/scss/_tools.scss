@@ -1,0 +1,47 @@
+.tools {
+  @include animated-background;
+  @include flex-center(center, column);
+  font-family: $main-font;
+  font-size: 1.2rem;
+  padding: 10px;
+
+  &__newCategory {
+    padding: 10px;
+
+    @media (max-width: $small) {
+      @include flex-center(center, column);
+      padding: 0px;
+    }
+  }
+
+  &__newCategoryInput {
+    width: 40vw;
+    color: $font-color-dark;
+  }
+
+  &__newCategorySubmitButton {
+    @include backgroundColorAndHover($submit-bgc);
+    color: $font-color;
+    background-color: $submit-bgc;
+  }
+
+  &__resetButton {
+    @include backgroundColorAndHover($cancel-bgc);
+    color: $font-color;
+    margin-top: 10px;
+    width: 150px;
+  }
+
+  &__input {
+    @include input-style;
+    margin: 5px;
+
+    @media (max-width: $small) {
+      width: 65vw;
+    }
+  }
+
+  &__validationInfo {
+    @include text-style;
+  }
+}

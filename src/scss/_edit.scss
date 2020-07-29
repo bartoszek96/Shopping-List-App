@@ -1,0 +1,82 @@
+.edit {
+  @include animated-background;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  font-size: 1.2rem;
+  border-top: $edit-form-border;
+  transform: translateY(100%);
+  transition: transform 1s;
+
+  &--show {
+    transform: translateY(0%);
+  }
+
+  &__form {
+    @include flex-center(space-evenly, column);
+    height: 250px;
+  }
+
+  &__wrapper {
+    @include flex-center(space-evenly);
+
+    &--inputs {
+      @media (max-width: $small) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__inputText {
+    width: 50vw;
+  }
+
+  &__inputNumber {
+    width: 120px;
+  }
+
+  &__inputSelect {
+    width: 120px;
+  }
+
+  &__submitButton {
+    @include backgroundColorAndHover($submit-bgc);
+  }
+
+  &__cancelButton {
+    @include backgroundColorAndHover($cancel-bgc);
+  }
+
+  &__input {
+    @include input-style;
+    font-family: $main-font;
+    padding: 3px;
+    margin: 10px;
+    font-weight: 700;
+
+    &--wide {
+      @media (max-width: $small) {
+        width: 75vw;
+      }
+    }
+
+    &--narrow {
+      color: $font-color;
+      width: 150px;
+      
+      @media (max-width: $small) {
+        width: 120px;
+      }
+    }
+  }
+
+  &__validationInfo {
+    @include text-style;
+    font-size: 1.5rem;
+    font-family: $main-font;
+
+    @media (max-width: $small) {
+      font-size: 1rem;
+    }
+  }
+}

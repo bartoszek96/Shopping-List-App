@@ -1,0 +1,9 @@
+.header {
+  @include animated-background;
+  padding: 10px;
+
+  &__title {
+    @include text-style($font-color);
+    font-size: 2rem;
+  }
+}

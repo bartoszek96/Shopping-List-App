@@ -1,0 +1,33 @@
+.resetWindow {
+  position: fixed;
+  top: 30vh;
+  z-index: 2;
+  display: none;
+  width: 100vw;
+  padding: 30px;
+  background-color: black;
+
+  &--show {
+    @include flex-center(center, column);
+  }
+
+  &__input {
+    @include input-style;
+    color: $font-color;
+    width: 120px;
+    margin: 10px;
+
+    &--accept {
+      @include backgroundColorAndHover($submit-bgc);
+    }
+
+    &--cancel {
+      @include backgroundColorAndHover($cancel-bgc);
+    }
+  }
+
+  &__info {
+    @include text-style;
+    margin: 10px;
+  }
+}

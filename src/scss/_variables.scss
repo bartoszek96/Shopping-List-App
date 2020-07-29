@@ -1,0 +1,29 @@
+// breakpoint
+$small: 768px;
+
+// fonts
+$main-font: roboto;
+
+// gradient for animation
+$bg-gradient: linear-gradient(
+  90deg,
+  rgb(96, 119, 240) 0%,
+  rgb(70, 144, 244) 25%,
+  rgb(86, 108, 216) 75%,
+  rgb(72, 96, 212) 100%
+);
+
+// background colors
+$form-bgc: rgba(255, 255, 255, 0.1);
+$submit-bgc: rgba(0, 200, 0, 0.6);
+$cancel-bgc: rgba(200, 0, 0, 0.6);
+$separator-bgc: rgba(87, 87, 87, 0.192);
+
+// font colors
+$edit-icon-color: green;
+$delete-icon-color: red;
+$font-color: white;
+$font-color-dark: black;
+
+// borders
+$edit-form-border: 2px solid black;

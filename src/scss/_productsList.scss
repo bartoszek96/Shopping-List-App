@@ -1,0 +1,47 @@
+.products {
+  font-family: $main-font;
+
+  &__list {
+    @include flex-center(center, column);
+    width: 100vw;
+  }
+
+  &__item {
+    @include flex-center(space-between);
+    width: 70vw;
+    padding: 3px;
+
+    @media (max-width: $small) {
+      width: 90vw;
+    }
+  }
+
+  &__item--separator {
+    @include flex-center(center);
+    background-color: $separator-bgc;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: 700;
+  }
+
+  &__item--summary {
+    @include flex-center(center);
+    @include text-style($font-color-dark);
+    margin-top: 20px;
+  }
+
+  &__tool {
+    width: 30px;
+    padding: 3px;
+    border: none;
+
+    &--edit {
+      @include colorAndHover($edit-icon-color);
+    }
+
+    &--delete {
+      @include colorAndHover($delete-icon-color);
+    }
+  }
+}
